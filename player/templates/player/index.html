@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Charm" rel="stylesheet">
+    <title>FIFA Team Search From SYSU</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'player/css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+
+
+<div class="begin">
+    <div class="title_img">
+        <img src="{% static 'player/img/logo.jpg' %}" alt="SYSU" class="head_img">
+    </div>
+    <div class="web_title">FIFA 2016 All in One</div>
+</div>
+
+
+<div class="cover" style="background-image: url('{% static 'player/img/mr.jpg' %}')">
+</div>
+
+
+<div class='unit'>
+
+    <h2>Players</h2>
+    <div class="bar6">
+        <form accept-charset="UTF-8" action="/player/srp" method="post">
+            <input type="text" name="player_input" placeholder="  Type Player names here...">
+            <button type="submit"></button>
+            {% csrf_token %}
+        </form>
+    </div>
+    <div class="item">
+        <img src="{% static 'player/img/messi.jpg' %}"/>
+        <span class="caption">
+            <a href="/player/p/30981">Lionel Messi </a>
+        </span>
+    </div>
+    <div class="item">
+        <img src="{% static 'player/img/ronaldo.jpg' %}"/>
+        <span class="caption">
+            <a href="/player/p/30893">Cristiano Ronaldo </a>
+        </span>
+    </div>
+    <div class="item">
+        <img src="{% static 'player/img/modric.jpg' %}"/>
+        <span class="caption">
+            <a href="/player/p/31097">Luka Modric </a>
+        </span>
+    </div>
+    <div class="item">
+        <img src="{% static 'player/img/neymar.jpg' %}"/>
+        <span class="caption">
+            <a href="/player/p/19533">Neymar</a>
+        </span>
+    </div>
+</div>
+
+<div class='unit'>
+
+    <h2>Teams</h2>
+    <div class="bar6">
+        <form accept-charset="UTF-8" action="/player/srt" method="post">
+            <input type="text" name="team_input" placeholder="  Type Team names here...">
+            <button type="submit"></button>
+            {% csrf_token %}
+        </form>
+
+    </div>
+    <div class="item">
+        <img src="{% static 'player/img/real_madrid.png' %}"/>
+        <span class="caption">
+            <a href="/player/t/8633">Real Madrid </a>
+        </span>
+    </div>
+    <div class="item">
+        <img src="{% static 'player/img/barcelona_fc.png' %}"/>
+        <span class="caption">
+            <a href="/player/t/8634">Barcelona FC </a>
+        </span>
+    </div>
+    <div class="item">
+        <img src="{% static 'player/img/bayernmunich.png' %}"/>
+        <span class="caption">
+            <a href="/player/t/9823">Bayern Munich </a>
+        </span>
+    </div>
+    <div class="item">
+        <img src="{% static 'player/img/juventus_logo.png' %}"/>
+        <span class="caption">
+            <a href="/player/t/9885">Juventus</a>
+        </span>
+    </div>
+</div>
+
+<div class='unit'>
+    <h2>League</h2>
+    {% for league in leagues %}
+        <li style="margin:14px;"><a href="/player/l/{{ league.id }}">{{ league.name }} </a></li>
+    {% endfor %}
+</div>
+
+
+{#<div class='unit'>#}
+{#    <h2>Recent Matches</h2>#}
+{#        {% for match in recent_matchs %}#}
+{#            <li style="margin:14px;"><a href="/player/m/{{ match.id }}">{{ match.league.name }} /{{ match.date }}</a></li>#}
+{#        {% endfor %}#}
+{#</div>#}
+
+
+<div class="end">
+    <div class="foot_note">
+        COPYRIGHT © All rights reserved - WAYNE MAI
+    </div>
+    <div class="foot_note">
+        Address : No. 135, Xingang Xi Road, Guangzhou, 510275, P. R. China
+    </div>
+    <div class="foot_note">
+        Email : maijj6@mail2.sysu.edu.cn
+    </div>
+    <div class="foot_note">
+        Author : 16337157 / 16337179 / 16337180
+    </div>
+</div>
+
+</body>
+</html>

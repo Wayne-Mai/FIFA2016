@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Charm" rel="stylesheet">
+    <title>FIFA Team Search From SYSU</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'player/css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+<div class="begin">
+    <div class="title_img">
+        <img src="{% static 'player/img/logo.jpg' %}" alt="SYSU" class="head_img">
+    </div>
+    <div class="web_title">FIFA 2016 All in One</div>
+</div>
+<a id='homepage' href="/player">
+ Back to Homepage
+</a>
+
+<div class="table-title">
+    <h3>Team Main Attributes</h3>
+</div>
+
+<table class="table-fill">
+    <tr>
+        <th>Main Attribute</th>
+        <th>Configure</th>
+    </tr>
+    <tr>
+        <td>id</td>
+        <td>{{ info.id }}</td>
+    </tr>
+    <tr>
+        <td>team_api_id</td>
+        <td>{{ info.team_api_id }}</td>
+    </tr>
+    <tr>
+        <td>team_fifa_api_id</td>
+        <td>{{ info.team_fifa_api_id }}</td>
+    </tr>
+    <tr>
+        <td>team_long_name</td>
+        <td>{{ info.team_long_name }}</td>
+    </tr>
+    <tr>
+        <td>team_short_name</td>
+        <td>{{ info.team_short_name }}</td>
+    </tr>
+    <tr>
+        <td>Recent Matches</td>
+
+        <td>
+            {% for recent_match in recent_matchs %}
+                <li><a href="/player/m/{{ recent_match.id }}">{{ recent_match.league.name }} /{{ recent_match.date }} </a></li>
+            {% endfor %}
+
+        </td>
+    </tr>
+</table>
+
+<div class="table-title">
+    <h3>Team Other Attributes</h3>
+</div>
+
+<table class="table-fill">
+    <tr>
+        <th>Other Attribute</th>
+        <th>Configure</th>
+    </tr>
+    <tr>
+        <td>buildupplayspeed</td>
+        <td>{{ detail_info.buildupplayspeed }}</td>
+    </tr>
+    <tr>
+        <td>buildupplayspeedclass</td>
+        <td>{{ detail_info.buildupplayspeedclass }}</td>
+    </tr>
+    <tr>
+        <td>buildupplaydribbling</td>
+        <td>{{ detail_info.buildupplaydribbling }}</td>
+    </tr>
+    <tr>
+        <td>buildupplaydribblingclass</td>
+        <td>{{ detail_info.buildupplaydribblingclass }}</td>
+    </tr>
+    <tr>
+        <td>buildupplaypassing</td>
+        <td>{{ detail_info.buildupplaypassing }}</td>
+    </tr>
+    <tr>
+        <td>buildupplaypassingclass</td>
+        <td>{{ detail_info.buildupplaypassingclass }}</td>
+    </tr>
+    <tr>
+        <td>buildupplaypositioningclass</td>
+        <td>{{ detail_info.buildupplaypositioningclass }}</td>
+    </tr>
+    <tr>
+        <td>chancecreationpassing</td>
+        <td>{{ detail_info.chancecreationpassing }}</td>
+    </tr>
+    <tr>
+        <td>chancecreationpassingclass</td>
+        <td>{{ detail_info.chancecreationpassingclass }}</td>
+    </tr>
+    <tr>
+        <td>chancecreationcrossing</td>
+        <td>{{ detail_info.chancecreationcrossing }}</td>
+    </tr>
+    <tr>
+        <td>chancecreationcrossingclass</td>
+        <td>{{ detail_info.chancecreationcrossingclass }}</td>
+    </tr>
+    <tr>
+        <td>chancecreationshooting</td>
+        <td>{{ detail_info.chancecreationshooting }}</td>
+    </tr>
+    <tr>
+        <td>chancecreationshootingclass</td>
+        <td>{{ detail_info.chancecreationshootingclass }}</td>
+    </tr>
+    <tr>
+        <td>chancecreationpositioningclass</td>
+        <td>{{ detail_info.chancecreationpositioningclass }}</td>
+    </tr>
+    <tr>
+        <td>defencepressure</td>
+        <td>{{ detail_info.defencepressure }}</td>
+    </tr>
+    <tr>
+        <td>defencepressureclass</td>
+        <td>{{ detail_info.defencepressureclass }}</td>
+    </tr>
+    <tr>
+        <td>defenceaggression</td>
+        <td>{{ detail_info.defenceaggression }}</td>
+    </tr>
+    <tr>
+        <td>defenceaggressionclass</td>
+        <td>{{ detail_info.defenceaggressionclass }}</td>
+    </tr>
+    <tr>
+        <td>defenceteamwidth</td>
+        <td>{{ detail_info.defenceteamwidth }}</td>
+    </tr>
+    <tr>
+        <td>defenceteamwidthclass</td>
+        <td>{{ detail_info.defenceteamwidthclass }}</td>
+    </tr>
+    <tr>
+        <td>defencedefenderlineclass</td>
+        <td>{{ detail_info.defencedefenderlineclass }}</td>
+    </tr>
+
+
+</table>
+
+<div class="end">
+    <div class="foot_note">
+        COPYRIGHT © All rights reserved - WAYNE MAI
+    </div>
+    <div class="foot_note">
+        Address : No. 135, Xingang Xi Road, Guangzhou, 510275, P. R. China
+    </div>
+    <div class="foot_note">
+        Email : maijj6@mail2.sysu.edu.cn
+    </div>
+    <div class="foot_note">
+        Author : 16337157 / 16337179 / 16337180
+    </div>
+</div>
+
+</body>
+</html>

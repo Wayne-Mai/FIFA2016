@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Charm" rel="stylesheet">
+    <title>FIFA Team Search From SYSU</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'player/css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+
+
+<div class="begin">
+    <div class="title_img">
+        <img src="{% static 'player/img/logo.jpg' %}" alt="SYSU" class="head_img">
+    </div>
+    <div class="web_title">FIFA 2016 All in One</div>
+</div>
+
+<a id='homepage' href="/player" style="margin-top: 20px;">
+ Back to Homepage
+</a>
+
+<div class="bar6" style="margin-top: 30px;">
+<form accept-charset="UTF-8" action="/player/srp" method="post">
+    <input type="text" name="player_input" placeholder="  Type Player names here...">
+    <button type="submit"></button>
+    {% csrf_token %}
+</form>
+</div>
+
+{% if cache %}
+<h2>Showing results for {{ cache }}</h2>
+{% endif %}
+
+<h1 style="background: orangered;color: #FFFFFF;display: block;text-align: center;">{{ error }}</h1>
+
+{% if result %}
+<ol>
+    {% for r in result %}
+        <li><a href="/player/p/{{ r.player_api_id }}">{{ r.player_name }}  </a></li>
+    {% endfor %}
+</ol>
+{% endif %}
+
+<div class="end">
+    <div class="foot_note">
+        COPYRIGHT © All rights reserved - WAYNE MAI
+    </div>
+    <div class="foot_note">
+        Address : No. 135, Xingang Xi Road, Guangzhou, 510275, P. R. China
+    </div>
+    <div class="foot_note">
+        Email : maijj6@mail2.sysu.edu.cn
+    </div>
+    <div class="foot_note">
+        Author : 16337157 / 16337179 / 16337180
+    </div>
+</div>
+
+</body>
+</html>

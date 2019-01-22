@@ -1,0 +1,6 @@
+FIFA2016/settings.py
+FIFA2016/static/
+static/admin/
+
+*.pyc
+.idea/

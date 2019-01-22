@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Charm" rel="stylesheet">
+    <title>FIFA Team Search From SYSU</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'player/css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+<div class="begin">
+    <div class="title_img">
+        <img src="{% static 'player/img/logo.jpg' %}" alt="SYSU" class="head_img">
+    </div>
+    <div class="web_title">FIFA 2016 All in One</div>
+</div>
+
+
+<a id='homepage' href="/player">
+ Back to Homepage
+</a>
+
+<div class="table-title">
+    <h3>Player Main Attributes</h3>
+</div>
+
+<table class="table-fill">
+  <tr>
+    <th>Main Attribute</th>
+    <th>Configure</th>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>{{  info.id}}</td>
+  </tr>
+  <tr>
+    <td>player_name</td>
+    <td>{{  info.player_name}}</td>
+  </tr>
+      <tr>
+    <td>player_api_id</td>
+    <td>{{  info.player_api_id}}</td>
+  </tr>
+
+  <tr>
+    <td>player_fifa_api_id</td>
+    <td>{{  info.player_fifa_api_id}}</td>
+  </tr>
+  <tr>
+    <td>height</td>
+    <td>{{  info.height}}</td>
+  </tr>
+  <tr>
+    <td>weight</td>
+    <td>{{  info.weight}}</td>
+  </tr>
+</table>
+
+<div class="table-title">
+    <h3>Player Other Attributes</h3>
+</div>
+
+
+<table class="table-fill">
+  <tr>
+    <th>Other Attribute</th>
+    <th>Configure</th>
+  </tr>
+  <tr>
+    <td>overall_rating</td>
+    <td>{{  detail_info.overall_rating}}</td>
+  </tr>
+  <tr>
+    <td>potential</td>
+    <td>{{  detail_info.potential}}</td>
+  </tr>
+  <tr>
+    <td>preferred_foot</td>
+    <td>{{  detail_info.preferred_foot}}</td>
+  </tr>
+  <tr>
+    <td>attacking_work_rate</td>
+    <td>{{  detail_info.attacking_work_rate}}</td>
+  </tr>
+  <tr>
+    <td>defensive_work_rate</td>
+    <td>{{  detail_info.defensive_work_rate}}</td>
+  </tr>
+    <tr>
+    <td>crossing</td>
+    <td>{{ detail_info.crossing }}</td>
+  </tr>
+  <tr>
+    <td>finishing</td>
+    <td>{{  detail_info.finishing}}</td>
+  </tr>
+  <tr>
+    <td>heading_accuracy</td>
+    <td>{{  detail_info.heading_accuracy}}</td>
+  </tr>
+  <tr>
+    <td>short_passing</td>
+    <td>{{  detail_info.short_passing}}</td>
+  </tr>
+  <tr>
+    <td>volleys</td>
+    <td>{{  detail_info.volleys}}</td>
+  </tr>
+  <tr>
+    <td>dribbling</td>
+    <td>{{  detail_info.dribbling}}</td>
+  </tr>
+  <tr>
+    <td>curve</td>
+    <td>{{ detail_info.curve }}</td>
+  </tr>
+  <tr>
+    <td>free_kick_accuracy</td>
+    <td>{{  detail_info.free_kick_accuracy}}</td>
+  </tr>
+  <tr>
+    <td>long_passing</td>
+    <td>{{  detail_info.long_passing}}</td>
+  </tr>
+  <tr>
+    <td>ball_control</td>
+    <td>{{  detail_info.ball_control}}</td>
+  </tr>
+  <tr>
+    <td>acceleration</td>
+    <td>{{  detail_info.acceleration}}</td>
+  </tr>
+  <tr>
+    <td>sprint_speed</td>
+    <td>{{  detail_info.sprint_speed}}</td>
+  </tr>
+    <tr>
+    <td>agility</td>
+    <td>{{ detail_info.agility }}</td>
+  </tr>
+  <tr>
+    <td>reactions</td>
+    <td>{{  detail_info.reactions}}</td>
+  </tr>
+  <tr>
+    <td>balance</td>
+    <td>{{  detail_info.balance}}</td>
+  </tr>
+  <tr>
+    <td>shot_power</td>
+    <td>{{  detail_info.shot_power}}</td>
+  </tr>
+  <tr>
+    <td>jumping</td>
+    <td>{{  detail_info.jumping}}</td>
+  </tr>
+  <tr>
+    <td>stamina</td>
+    <td>{{  detail_info.stamina}}</td>
+  </tr>
+  <tr>
+    <td>strength</td>
+    <td>{{  detail_info.strength}}</td>
+  </tr>
+  <tr>
+    <td>long_shots</td>
+    <td>{{  detail_info.long_shots}}</td>
+  </tr>
+  <tr>
+    <td>aggression</td>
+    <td>{{  detail_info.aggression}}</td>
+  </tr>
+  <tr>
+    <td>interceptions</td>
+    <td>{{  detail_info.interceptions}}</td>
+  </tr>
+    <tr>
+    <td>positioning</td>
+    <td>{{  detail_info.positioning}}</td>
+  </tr>
+  <tr>
+    <td>vision</td>
+    <td>{{  detail_info.vision}}</td>
+  </tr>
+  <tr>
+    <td>penalties</td>
+    <td>{{  detail_info.penalties}}</td>
+  </tr>
+  <tr>
+    <td>marking</td>
+    <td>{{  detail_info.marking}}</td>
+  </tr>
+  <tr>
+    <td>standing_tackle</td>
+    <td>{{  detail_info.standing_tackle}}</td>
+  </tr>
+  <tr>
+    <td>sliding_tackle</td>
+    <td>{{  detail_info.sliding_tackle}}</td>
+  </tr>
+  <tr>
+    <td>gk_diving</td>
+    <td>{{  detail_info.gk_diving}}</td>
+  </tr>
+  <tr>
+    <td>gk_handling</td>
+    <td>{{  detail_info.gk_handling}}</td>
+  </tr>
+  <tr>
+    <td>gk_kicking</td>
+    <td>{{  detail_info.gk_kicking}}</td>
+  </tr>
+  <tr>
+    <td>gk_positioning</td>
+    <td>{{  detail_info.gk_positioning}}</td>
+  </tr>
+  <tr>
+    <td>gk_reflexes</td>
+    <td>{{  detail_info.gk_reflexes}}</td>
+  </tr>
+
+
+</table>
+
+<div class="end">
+    <div class="foot_note">
+        COPYRIGHT © All rights reserved - WAYNE MAI
+    </div>
+    <div class="foot_note">
+        Address : No. 135, Xingang Xi Road, Guangzhou, 510275, P. R. China
+    </div>
+    <div class="foot_note">
+        Email : maijj6@mail2.sysu.edu.cn
+    </div>
+    <div class="foot_note">
+        Author : 16337157 / 16337179 / 16337180
+    </div>
+</div>
+
+</body>
+</html>

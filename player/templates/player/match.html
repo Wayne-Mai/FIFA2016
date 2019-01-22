@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Charm" rel="stylesheet">
+    <title>FIFA Team Search From SYSU</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'player/css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+
+
+<div class="begin">
+    <div class="title_img">
+        <img src="{% static 'player/img/logo.jpg' %}" alt="SYSU" class="head_img">
+    </div>
+    <div class="web_title">FIFA 2016 All in One</div>
+</div>
+
+<a id='homepage' href="/player">
+ Back to Homepage
+</a>
+
+<div class="table-title">
+    <h3>Match Info</h3>
+</div>
+
+
+<table class="table-fill">
+    <tr>
+        <th>Main Attribute</th>
+        <th>Configure</th>
+    </tr>
+    <tr>
+        <td>id</td>
+        <td>{{ info.id }}</td>
+    </tr>
+    <tr>
+        <td>country_id</td>
+        <td>{{ info.country_id }}</td>
+    </tr>
+    <tr>
+        <td>league_id</td>
+        <td>{{ info.league_id }}</td>
+    </tr>
+    <tr>
+        <td>season</td>
+        <td>{{ info.season }}</td>
+    </tr>
+    <tr>
+        <td>stage</td>
+        <td>{{ info.stage }}</td>
+    </tr>
+    <tr>
+        <td>match_api_id</td>
+        <td>{{ info.match_api_id }}</td>
+    </tr>
+    <tr>
+        <td>home_team_api_id</td>
+        <td><a href="/player/t/{{ info.home_team_api_id.team_api_id }}">{{ info.home_team_api_id.team_long_name }}</a> </td>
+    </tr>
+    <tr>
+        <td>away_team_api_id</td>
+        <td><a href="/player/t/{{ info.away_team_api_id.team_api_id }}">{{ info.away_team_api_id.team_long_name }}</a> </td>
+    </tr>
+    <tr>
+        <td>home_team_goal</td>
+        <td>{{ info.home_team_goal }}</td>
+    </tr>
+    <tr>
+        <td>away_team_goal</td>
+        <td>{{ info.away_team_goal }}</td>
+    </tr>
+    <tr>
+        <td>home_player_x1</td>
+        <td><a href="/player/p/{{ info.home_player_1_id.player_api_id }}">{{ info.home_player_1_id.player_name }}</a></td>
+    </tr>
+    <tr>
+        <td>home_player_x2</td>
+        <td><a href="/player/p/{{ info.home_player_2_id.player_api_id }}">{{ info.home_player_2_id.player_name }}</a></td>
+    </tr>
+    <tr>
+        <td>home_player_x3</td>
+        <td><a href="/player/p/{{ info.home_player_3_id.player_api_id }}">{{ info.home_player_3_id.player_name }}</a></td>
+    </tr>
+    <tr>
+        <td>home_player_x4</td>
+        <td><a href="/player/p/{{ info.home_player_4_id.player_api_id }}">{{ info.home_player_4_id.player_name }}</a></td>
+    </tr>
+    <tr>
+        <td>home_player_x5</td>
+        <td><a href="/player/p/{{ info.home_player_5_id.player_api_id }}">{{ info.home_player_5_id.player_name }}</a></td>
+    </tr>
+    <tr>
+        <td>home_player_x6</td>
+        <td><a href="/player/p/{{ info.home_player_6_id.player_api_id }}">{{ info.home_player_6_id.player_name }}</a></td>
+    </tr>
+    <tr>
+        <td>home_player_x7</td>
+        <td><a href="/player/p/{{ info.home_player_7_id.player_api_id }}">{{ info.home_player_7_id.player_name }}</a></td>
+    </tr>
+    <tr>
+        <td>home_player_x8</td>
+        <td><a href="/player/p/{{ info.home_player_8_id.player_api_id }}">{{ info.home_player_8_id.player_name }}</a></td>
+    </tr>
+    <tr>
+        <td>home_player_x9</td>
+        <td><a href="/player/p/{{ info.home_player_9_id.player_api_id }}">{{ info.home_player_9_id.player_name }}</a></td>
+    </tr>
+    <tr>
+        <td>home_player_x10</td>
+        <td><a href="/player/p/{{ info.home_player_10_id.player_api_id }}">{{ info.home_player_10_id.player_name }}</a></td>
+    </tr>
+    <tr>
+        <td>home_player_x11</td>
+        <td><a href="/player/p/{{ info.home_player_11_id.player_api_id }}">{{ info.home_player_11_id.player_name }}</a></td>
+    </tr>
+
+    <tr>
+        <td>away_player_x1</td>
+        <td><a href="/player/p/{{ info.away_player_1_id.player_api_id }}">{{ info.away_player_1_id.player_name }}</a></td>
+    </tr>
+    <tr>
+        <td>away_player_x2</td>
+        <td><a href="/player/p/{{ info.away_player_2_id.player_api_id }}">{{ info.away_player_2_id.player_name }}</a></td>
+    </tr>
+    <tr>
+        <td>away_player_x3</td>
+        <td><a href="/player/p/{{ info.away_player_3_id.player_api_id }}">{{ info.away_player_3_id.player_name }}</a></td>
+    </tr>
+    <tr>
+        <td>away_player_x4</td>
+        <td><a href="/player/p/{{ info.away_player_4_id.player_api_id }}">{{ info.away_player_4_id.player_name }}</a></td>
+    </tr>
+    <tr>
+        <td>away_player_x5</td>
+        <td><a href="/player/p/{{ info.away_player_5_id.player_api_id }}">{{ info.away_player_5_id.player_name }}</a></td>
+    </tr>
+    <tr>
+        <td>away_player_x6</td>
+        <td><a href="/player/p/{{ info.away_player_6_id.player_api_id }}">{{ info.away_player_6_id.player_name }}</a></td>
+    </tr>
+    <tr>
+        <td>away_player_x7</td>
+        <td><a href="/player/p/{{ info.away_player_7_id.player_api_id }}">{{ info.away_player_7_id.player_name }}</a></td>
+    </tr>
+    <tr>
+        <td>away_player_x8</td>
+        <td><a href="/player/p/{{ info.away_player_8_id.player_api_id }}">{{ info.away_player_8_id.player_name }}</a></td>
+    </tr>
+    <tr>
+        <td>away_player_x9</td>
+        <td><a href="/player/p/{{ info.away_player_9_id.player_api_id }}">{{ info.away_player_9_id.player_name }}</a></td>
+    </tr>
+    <tr>
+        <td>away_player_x10</td>
+        <td><a href="/player/p/{{ info.away_player_10_id.player_api_id }}">{{ info.away_player_10_id.player_name }}</a></td>
+    </tr>
+    <tr>
+        <td>away_player_x11</td>
+        <td><a href="/player/p/{{ info.away_player_11_id.player_api_id }}">{{ info.away_player_11_id.player_name }}</a></td>
+    </tr>
+
+    {#  <tr>#}
+    {#    <td>home_player_y1</td>#}
+    {#    <td><a href="/player/p/{{info.home_player_1_id.player_api_id}}">{{info.home_player_1_id.player_name}}</a></td>#}
+    {#  </tr>#}
+    {#  <tr>#}
+    {#    <td>home_player_y2 </td>#}
+    {#    <td><a href="/player/p/{{info.home_player_2_id.player_api_id}}">{{info.home_player_2_id.player_name}}</a></td>#}
+    {#  </tr>#}
+    {#  <tr>#}
+    {#    <td>home_player_y3</td>#}
+    {#    <td><a href="/player/p/{{info.home_player_3_id.player_api_id}}">{{info.home_player_3_id.player_name}}</a></td>#}
+    {#  </tr>#}
+    {#  <tr>#}
+    {#    <td>home_player_y4</td>#}
+    {#    <td><a href="/player/p/{{info.home_player_4_id.player_api_id}}">{{info.home_player_4_id.player_name}}</a></td>#}
+    {#  </tr>#}
+    {#  <tr>#}
+    {#    <td>home_player_y5</td>#}
+    {#    <td><a href="/player/p/{{info.home_player_5_id.player_api_id}}">{{info.home_player_5_id.player_name}}</a></td>#}
+    {#  </tr>#}
+    {#  <tr>#}
+    {#    <td>home_player_y6</td>#}
+    {#    <td><a href="/player/p/{{info.home_player_6_id.player_api_id}}">{{info.home_player_6_id.player_name}}</a></td>#}
+    {#  </tr>#}
+    {#  <tr>#}
+    {#    <td>home_player_y7</td>#}
+    {#    <td><a href="/player/p/{{info.home_player_7_id.player_api_id}}">{{info.home_player_7_id.player_name}}</a></td>#}
+    {#  </tr>#}
+    {#  <tr>#}
+    {#    <td>home_player_y8</td>#}
+    {#    <td><a href="/player/p/{{info.home_player_8_id.player_api_id}}">{{info.home_player_8_id.player_name}}</a></td>#}
+    {#  </tr>#}
+    {#  <tr>#}
+    {#    <td>home_player_y9</td>#}
+    {#    <td><a href="/player/p/{{info.home_player_9_id.player_api_id}}">{{info.home_player_9_id.player_name}}</a></td>#}
+    {#  </tr>#}
+    {#  <tr>#}
+    {#    <td>home_player_y10</td>#}
+    {#    <td><a href="/player/p/{{info.home_player_10_id.player_api_id}}">{{info.home_player_10_id.player_name}}</a></td>#}
+    {#  </tr>#}
+    {#  <tr>#}
+    {#    <td>home_player_y11</td>#}
+    {#    <td><a href="/player/p/{{info.home_player_11_id.player_api_id}}">{{info.home_player_11_id.player_name}}</a></td>#}
+    {#  </tr>#}
+    {##}
+    {#  <tr>#}
+    {#    <td>away_player_y1</td>#}
+    {#    <td><a href="/player/p/{{info.away_player_1_id.player_api_id}}">{{info.away_player_1_id.player_name}}</a></td>#}
+    {#  </tr>#}
+    {#  <tr>#}
+    {#    <td>away_player_y2 </td>#}
+    {#    <td><a href="/player/p/{{info.away_player_2_id.player_api_id}}">{{info.away_player_2_id.player_name}}</a></td>#}
+    {#  </tr>#}
+    {#  <tr>#}
+    {#    <td>away_player_y3</td>#}
+    {#    <td><a href="/player/p/{{info.away_player_3_id.player_api_id}}">{{info.away_player_3_id.player_name}}</a></td>#}
+    {#  </tr>#}
+    {#  <tr>#}
+    {#    <td>away_player_y4</td>#}
+    {#    <td><a href="/player/p/{{info.away_player_4_id.player_api_id}}">{{info.away_player_4_id.player_name}}</a></td>#}
+    {#  </tr>#}
+    {#  <tr>#}
+    {#    <td>away_player_y5</td>#}
+    {#    <td><a href="/player/p/{{info.away_player_5_id.player_api_id}}">{{info.away_player_5_id.player_name}}</a></td>#}
+    {#  </tr>#}
+    {#  <tr>#}
+    {#    <td>away_player_y6</td>#}
+    {#    <td><a href="/player/p/{{info.away_player_6_id.player_api_id}}">{{info.away_player_6_id.player_name}}</a></td>#}
+    {#  </tr>#}
+    {#  <tr>#}
+    {#    <td>away_player_y7</td>#}
+    {#    <td><a href="/player/p/{{info.away_player_7_id.player_api_id}}">{{info.away_player_7_id.player_name}}</a></td>#}
+    {#  </tr>#}
+    {#  <tr>#}
+    {#    <td>away_player_y8</td>#}
+    {#    <td><a href="/player/p/{{info.away_player_8_id.player_api_id}}">{{info.away_player_8_id.player_name}}</a></td>#}
+    {#  </tr>#}
+    {#  <tr>#}
+    {#    <td>away_player_y9</td>#}
+    {#    <td><a href="/player/p/{{info.away_player_9_id.player_api_id}}">{{info.away_player_9_id.player_name}}</a></td>#}
+    {#  </tr>#}
+    {#  <tr>#}
+    {#    <td>away_player_y10</td>#}
+    {#    <td><a href="/player/p/{{info.away_player_10_id.player_api_id}}">{{info.away_player_10_id.player_name}}</a></td>#}
+    {#  </tr>#}
+    {#  <tr>#}
+    {#    <td>away_player_y11</td>#}
+    {#    <td><a href="/player/p/{{info.away_player_11_id.player_api_id}}">{{info.away_player_11_id.player_name}}</a></td>#}
+    {#  </tr>#}
+
+    {#  <tr>#}
+    {#    <td>away_player_1</td>#}
+    {#    <td><a href="/player/p/{{info.away_player_1_id.player_api_id}}">{{info.away_player_1_id.player_name}}</a></td>#}
+    {#  </tr>#}
+    {#  <tr>#}
+    {#    <td>away_player_2 </td>#}
+    {#    <td><a href="/player/p/{{info.away_player_2_id.player_api_id}}">{{info.away_player_2_id.player_name}}</a></td>#}
+    {#  </tr>#}
+    {#  <tr>#}
+    {#    <td>away_player_3</td>#}
+    {#    <td><a href="/player/p/{{info.away_player_3_id.player_api_id}}">{{info.away_player_3_id.player_name}}</a></td>#}
+    {#  </tr>#}
+    {#  <tr>#}
+    {#    <td>away_player_4</td>#}
+    {#    <td><a href="/player/p/{{info.away_player_4_id.player_api_id}}">{{info.away_player_4_id.player_name}}</a></td>#}
+    {#  </tr>#}
+    {#  <tr>#}
+    {#    <td>away_player_5</td>#}
+    {#    <td><a href="/player/p/{{info.away_player_5_id.player_api_id}}">{{info.away_player_5_id.player_name}}</a></td>#}
+    {#  </tr>#}
+    {#  <tr>#}
+    {#    <td>away_player_6</td>#}
+    {#    <td><a href="/player/p/{{info.away_player_6_id.player_api_id}}">{{info.away_player_6_id.player_name}}</a></td>#}
+    {#  </tr>#}
+    {#  <tr>#}
+    {#    <td>away_player_7</td>#}
+    {#    <td><a href="/player/p/{{info.away_player_7_id.player_api_id}}">{{info.away_player_7_id.player_name}}</a></td>#}
+    {#  </tr>#}
+    {#  <tr>#}
+    {#    <td>away_player_8</td>#}
+    {#    <td><a href="/player/p/{{info.away_player_8_id.player_api_id}}">{{info.away_player_8_id.player_name}}</a></td>#}
+    {#  </tr>#}
+    {#  <tr>#}
+    {#    <td>away_player_9</td>#}
+    {#    <td><a href="/player/p/{{info.away_player_9_id.player_api_id}}">{{info.away_player_9_id.player_name}}</a></td>#}
+    {#  </tr>#}
+    {#  <tr>#}
+    {#    <td>away_player_10</td>#}
+    {#    <td><a href="/player/p/{{info.away_player_10_id.player_api_id}}">{{info.away_player_10_id.player_name}}</a></td>#}
+    {#  </tr>#}
+    {#  <tr>#}
+    {#    <td>away_player_11</td>#}
+    {#    <td><a href="/player/p/{{info.away_player_11_id.player_api_id}}">{{info.away_player_11_id.player_name}}</a></td>#}
+    {#  </tr>   #}
+
+
+</table>
+
+<div class="end">
+    <div class="foot_note">
+        COPYRIGHT © All rights reserved - WAYNE MAI
+    </div>
+    <div class="foot_note">
+        Address : No. 135, Xingang Xi Road, Guangzhou, 510275, P. R. China
+    </div>
+    <div class="foot_note">
+        Email : maijj6@mail2.sysu.edu.cn
+    </div>
+    <div class="foot_note">
+        Author : 16337157 / 16337179 / 16337180
+    </div>
+</div>
+
+</body>
+</html>
